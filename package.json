@@ -1,0 +1,19 @@
+{
+  "name": "pf-chain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-test": "nodemon dev-test.js",
+    "test": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.2.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}
