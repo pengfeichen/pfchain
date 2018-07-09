@@ -22,6 +22,10 @@ describe('TransactionPool', () => {
     expect(JSON.stringify(tp.transactions.find(tx => tx.id === newTransation.id))).not.toEqual(oldTransaction)
   })
 
+  it('clears transactions', ()=>{
+    tp.clear();
+    expect(tp.transactions.length).toEqual(0)
+  })
   describe('mixing corrupt and valid transactions', () => {
     let validTransactions;
 

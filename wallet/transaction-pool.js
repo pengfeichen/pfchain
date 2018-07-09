@@ -22,17 +22,20 @@ class TransactionPool {
       const outputTotal = tx.outputs.reduce((total, output) => {
         return total + output.amount;
       }, 0);
-
-      if(tx.input.amount !== outputTotal) {
+      if (tx.input.amount !== outputTotal) {
         console.log(`Invalid trasaction from ${tx.input.address}.`)
         return;
       }
-      if(!Transaction.verifyTransaction(tx)) {
+      if (!Transaction.verifyTransaction(tx)) {
         console.log(`Invalid signature from ${tx.input.address}`)
         return;
       }
       return tx;
     })
+  }
+
+  clear() {
+    this.transactions = [];
   }
 }
 
